@@ -17,6 +17,8 @@ def general(autonevek):
     evjaratok = []
     ertekelesek = []
     for i in range(0, 500):
+        betulista = []
+        szamlista = []
         r = randint(0,len(autonevek)-1)
         rauto.append(autonevek[r])
         for i in range(3):
@@ -30,7 +32,7 @@ def general(autonevek):
         r = randint(2000, 2023)
         evjarat = r
         evjaratok.append(evjarat)
-        r = randint(0,50) / 10
+        r = randint(0,100) / 10
         ertekelesek.append(r)
     
 
@@ -42,6 +44,10 @@ def general(autonevek):
         
 def kiiratas(rauto , rendszamok , evjaratok , ertekelesek):
     fw = open("adatok.txt", "w")
+    for i in range(0, 500):
+        fw.write(str(rauto[i])+ " " + str(rendszamok[i]) + " " + str(evjaratok[i]) + " " + str(ertekelesek[i]) + "\n")
+    fw.close()
+
 
 
 def main():
