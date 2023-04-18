@@ -10,13 +10,11 @@ def randombetu():
 
 
 def general(autonevek):
-    betulista = []
     rauto = []
-    szamlista = []
     rendszamok = []
     evjaratok = []
     ertekelesek = []
-    for i in range(0, 500):
+    for i in range(0, 501):
         betulista = []
         szamlista = []
         r = randint(0,len(autonevek)-1)
