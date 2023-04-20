@@ -6,10 +6,9 @@ def randombetu():
     r = randint(65,90)
     return chr(r)
 
-    
-
 
 def general(autonevek):
+
     # betulista = []
     rauto = []
     # szamlista = []
@@ -17,6 +16,13 @@ def general(autonevek):
     evjaratok = []
     ertekelesek = []
     for i in range(0, 500):
+
+    rauto = []
+    rendszamok = []
+    evjaratok = []
+    ertekelesek = []
+    for i in range(0, 501):
+
         betulista = []
         szamlista = []
         r = randint(0,len(autonevek)-1)
@@ -32,7 +38,7 @@ def general(autonevek):
         r = randint(2000, 2023)
         evjarat = r
         evjaratok.append(evjarat)
-        r = randint(0,50) / 10
+        r = randint(0,100) / 10
         ertekelesek.append(r)
     
 
@@ -44,6 +50,10 @@ def general(autonevek):
         
 def kiiratas(rauto , rendszamok , evjaratok , ertekelesek):
     fw = open("adatok.txt", "w")
+    for i in range(0, 500):
+        fw.write(str(rauto[i])+ " " + str(rendszamok[i]) + " " + str(evjaratok[i]) + " " + str(ertekelesek[i]) + "\n")
+    fw.close()
+
 
 
 
