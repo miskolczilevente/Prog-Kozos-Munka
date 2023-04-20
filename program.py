@@ -22,12 +22,13 @@ def evjarat(evj, keev):
 
 def nyolcfeletti(re, er):
     i = 0
-    while not(er[i] > 8):
+    while i < len(er) and not(er[i] > 8):
         i += 1
     if i < len(er):
         print(f"Az első 8.0 fölöttire értekelt autó rendszama: {re[i]}") 
     else:
         print("Nincs 8.0 fölöttire értékelt autó!")
+
 
 
 def main():
@@ -41,4 +42,5 @@ def main():
     # print(evjaratok)
     evjarat(evjaratok, kert_evjarat)
     nyolcfeletti(rendszamok, ertekelesek)
+    megszamolas(autonevek)
 main()
