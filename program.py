@@ -1,5 +1,5 @@
 def beolvasas(au, re, ev, er):
-    fr = open("adatok.txt", "r")
+    fr = open("be2.txt", "r")
     sor = fr.readline()
     while sor != "":
         sor = sor.strip().split()
@@ -13,9 +13,9 @@ def beolvasas(au, re, ev, er):
 
 def evjarat(evj, keev):
     i = 0
-    while not(evj[i] == keev):
+    while i < len(evj) and not(evj[i] == keev):
         i += 1
-    if i <= len(evj):
+    if i < len(evj):
         print (f"Van {keev} évjáratú auto")
     else:
         print(f"Nincs {keev} évjáratú auto")
@@ -42,5 +42,5 @@ def main():
     # print(evjaratok)
     evjarat(evjaratok, kert_evjarat)
     nyolcfeletti(rendszamok, ertekelesek)
-    megszamolas(autonevek)
+    
 main()
