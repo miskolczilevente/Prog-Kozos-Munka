@@ -15,12 +15,6 @@ def general(autonevek):
     rendszamok = []
     evjaratok = []
     ertekelesek = []
-    for i in range(0, 500):
-
-    rauto = []
-    rendszamok = []
-    evjaratok = []
-    ertekelesek = []
     for i in range(0, 501):
 
         betulista = []
