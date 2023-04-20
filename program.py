@@ -25,9 +25,9 @@ def nyolcfeletti(re, er):
     while not(er[i] > 8):
         i += 1
     if i < len(er):
-        return f"Az első 8.0 fölöttire értekelt autó rendszáma: {re[i]}"
+        return {re[i]}
     else:
-        return "Nincs 8.0 fölöttire értékelt autó!"
+        return 0
 
 
 
