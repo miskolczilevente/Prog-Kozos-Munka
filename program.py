@@ -16,14 +16,18 @@ def evjarat(evj, keev):
     while not(evj[i] == keev):
         i += 1
     if i <= len(evj):
-        print ("Van ilyen evjáratú auto")
+        print (f"Van {keev} évjáratú auto")
     else:
-        print("Nincs ilyen evjáratú auto")
+        print(f"Nincs {keev} évjáratú auto")
 
 def nyolcfeletti(re, er):
     i = 0
     while not(er[i] > 8.0):
-        
+        i += 1
+    if i < len(er):
+        print(f"Az első 8.0 fölöttire értekelt autó rendszáma: {re[i]}")
+    else:
+        print("Nincs 8.0 fölöttire értékelt autó")
 
 
 
