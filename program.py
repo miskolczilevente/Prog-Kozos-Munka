@@ -1,5 +1,5 @@
 def beolvasas(au, re, ev, er):
-    fr = open("be2.txt", "r")
+    fr = open("adatok.txt", "r")
     sor = fr.readline()
     while sor != "":
         sor = sor.strip().split()
@@ -25,10 +25,9 @@ def nyolcfeletti(re, er):
     while not(er[i] > 8):
         i += 1
     if i < len(er):
-        return {re[i]}
+        print(f"Az első 8.0 fölöttire értekelt autó rendszama: {re[i]}") 
     else:
-        return 0
-
+        print("Nincs 8.0 fölöttire értékelt autó!")
 
 
 def main():
@@ -42,5 +41,4 @@ def main():
     # print(evjaratok)
     evjarat(evjaratok, kert_evjarat)
     nyolcfeletti(rendszamok, ertekelesek)
-    print(nyolcfeletti)
 main()
