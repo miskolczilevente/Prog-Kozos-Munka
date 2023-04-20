@@ -10,13 +10,15 @@ def randombetu():
 
 
 def general(autonevek):
-    betulista = []
+    # betulista = []
     rauto = []
-    szamlista = []
+    # szamlista = []
     rendszamok = []
     evjaratok = []
     ertekelesek = []
     for i in range(0, 500):
+        betulista = []
+        szamlista = []
         r = randint(0,len(autonevek)-1)
         rauto.append(autonevek[r])
         for i in range(3):
@@ -44,13 +46,11 @@ def kiiratas(rauto , rendszamok , evjaratok , ertekelesek):
     fw = open("adatok.txt", "w")
 
 
+
 def main():
     autonevek = ["Tesla", "Cadillac", "Dodge", "Lexus", "Porsche", "Nissan", "Ford", "Audi", "Mercedes", "Volkswagen", "Mitsubishi" ]
     rauto , rendszamok , evjaratok , ertekelesek = general(autonevek)
     kiiratas(rauto , rendszamok , evjaratok , ertekelesek)
     
-
-
-
 
 main()
