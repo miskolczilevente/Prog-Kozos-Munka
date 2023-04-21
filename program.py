@@ -1,5 +1,5 @@
-def beolvasas(au, re, ev, er):
-    fr = open("be2.txt", "r")
+def beolvasas(au, re, ev, er, fn):
+    fr = open(fn, "r")
     sor = fr.readline()
     while sor != "":
         sor = sor.strip().split()
@@ -29,18 +29,31 @@ def nyolcfeletti(re, er):
     else:
         print("Nincs 8.0 fölöttire értékelt autó!")
 
+def kivalogatas(evj, nev, autolista, rendsz):
+    legujabbak = []
+    for i in range(len(evj)):
+        if nev == autolista[i] and 2020 < evj[i]:
+            legujabbak.append(rendsz[i])
+    return legujabbak
 
+def kiiratas(leg):
+    print("Ezek a legujabbak a megadott markabol: ", end="")
+    for i in range(len(leg)):
+        print(leg[i], end=" ")
 
 def main():
-    
+    fajlnev = input("Add meg a beolvasni kivant fajl nevet: ")
     autonevek = []
     rendszamok = []
     evjaratok = []
     ertekelesek = []
+    autonev = input("Auto nev: ")
     kert_evjarat = int(input("Kert evjarat: "))
-    beolvasas(autonevek, rendszamok, evjaratok, ertekelesek)
+    beolvasas(autonevek, rendszamok, evjaratok, ertekelesek, fajlnev)
     # print(evjaratok)
     evjarat(evjaratok, kert_evjarat)
     nyolcfeletti(rendszamok, ertekelesek)
+    legujabbak = kivalogatas(evjaratok, autonev, autonevek, rendszamok)
+    kiiratas(legujabbak)
     
 main()
