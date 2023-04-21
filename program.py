@@ -11,21 +11,26 @@ def beolvasas(au, re, ev, er, fn):
 
     fr.close()
 
-def evjarat(evj, keev):
-    i = 0
-    while i < len(evj) and not(evj[i] == keev):
-        i += 1
-    if i < len(evj):
-        print (f"Van {keev} évjáratú auto")
+def evjarat(evj, keev=""):
+    if keev == "" or keev == "0":
+        print("Nem adtál meg erteket")
     else:
-        print(f"Nincs {keev} évjáratú auto")
+        i = 0
+        keev = int(keev)
+        while i < len(evj) and not(evj[i] == keev):
+            i += 1
+        if i < len(evj):
+            print(f"Van {keev} évjáratú auto")
+        else:
+            print(f"Nincs {keev} évjáratú auto")
+       
 
 def nyolcfeletti(re, er):
     i = 0
     while i < len(er) and not(er[i] > 8):
         i += 1
     if i < len(er):
-        print(f"Az első 8.0 fölöttire értekelt autó rendszama: {re[i]}") 
+        print (f"Az első 8.0 fölöttire értekelt autó rendszama: {re[i]}") 
     else:
         print("Nincs 8.0 fölöttire értékelt autó!")
 
@@ -48,7 +53,7 @@ def main():
     evjaratok = []
     ertekelesek = []
     autonev = input("Auto nev: ")
-    kert_evjarat = int(input("Kert evjarat: "))
+    kert_evjarat = input("Kert evjarat: ")
     beolvasas(autonevek, rendszamok, evjaratok, ertekelesek, fajlnev)
     # print(evjaratok)
     evjarat(evjaratok, kert_evjarat)
