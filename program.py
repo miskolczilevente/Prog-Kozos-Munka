@@ -16,20 +16,28 @@ def evjarat(evj, keev):
     while not(evj[i] == keev):
         i += 1
     if i <= len(evj):
-        print (f"Van {keev} évjáratú auto")
+        print(f"Van {keev} évjáratú auto")
     else:
         print(f"Nincs {keev} évjáratú auto")
 
 def nyolcfeletti(re, er):
     i = 0
-    while not(er[i] > 8):
+    while i < len(er) and not( er[i] > 8 ):
         i += 1
     if i < len(er):
-        return f"Az első 8.0 fölöttire értekelt autó rendszáma: {re[i]}"
+        print(f"Az első 8.0 fölöttire értekelt autó rendszáma: {re[i]}")
     else:
-        return "Nincs 8.0 fölöttire értékelt autó!"
+        print("Nincs 8.0 fölöttire értékelt autó!")
 
-
+def megszamolas(autonevek):
+    if "Ford" in autonevek:
+        darab = 0 
+        for i in range(len(autonevek)):
+            if autonevek[i] == "Ford":
+                darab += 1
+        print(f"{darab} db Ford auto van.")
+    else:
+        print("Nincs ilyen")
 
 def main():
     
@@ -42,5 +50,6 @@ def main():
     # print(evjaratok)
     evjarat(evjaratok, kert_evjarat)
     nyolcfeletti(rendszamok, ertekelesek)
-    print(nyolcfeletti)
+    # print(nyolcfeletti)
+    megszamolas(autonevek)
 main()
