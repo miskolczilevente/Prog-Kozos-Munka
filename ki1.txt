@@ -1,0 +1,22 @@
+Add meg a beolvasni kivant fajl nevet: be1.txt
+Auto nev: Mitsubishi
+Kert evjarat: 2017
+
+
+1. Feladat:
+Az első 8.0 fölöttire értekelt autó rendszama: TEN-335
+
+
+2. Feladat:
+Nincs 2017 évjáratú auto
+
+
+3. Feladat:
+Nincs ilyen
+
+
+4. Feladat:
+Nincs ilyen
+
+5. Feladat:
+A(z) Mitsubishi értékeléseinek átlaga: 5.8

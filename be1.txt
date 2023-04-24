@@ -17,3 +17,6 @@ Porsche AGG-413 2012 3.7
 Lexus GBC-572 2013 3.0
 Audi YVO-019 2015 2.4
 Nissan AZZ-779 2012 8.7
+Mitsubishi ISL-657 2014 5.9
+Porsche SOT-154 2019 5.4
+

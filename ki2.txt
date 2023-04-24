@@ -1,7 +1,25 @@
-Kert autó: Mitsubishi
-Kert evjarat: 2017
-Van 2017 evjáratú auto
-Nincs 8.0 fölöttire értékelt autó!
-A Mitsubishi db száma: 3 db
-A Ford átlaga: 4.65
+Add meg a beolvasni kivant fajl nevet: be2.txt
+Auto nev: Porsche
+Kert evjarat: 2021
+
+
+1. Feladat:
+Az első 8.0 fölöttire értekelt autó rendszama: TEN-335
+
+
+2. Feladat:
+Van 2021 évjáratú auto
+
+
+3. Feladat:
+Nincs ilyen
+
+
+4. Feladat:
+Ezek a legujabbak a megadott markabol: UYO-057
+
+5. Feladat:
+A(z) Porsche értékeléseinek átlaga: 6.55
+
+
 
