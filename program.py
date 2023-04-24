@@ -26,8 +26,9 @@ def f2(evjaratok, kert_evjarat):
     evjarat(evjaratok, kert_evjarat)
     
 
-def f3():
+def f3(autonevek):
     kiiras(3)
+    megszamolas(autonevek)
 
 
 def f4(evjaratok, autonev, autonevek, rendszamok):
@@ -35,9 +36,10 @@ def f4(evjaratok, autonev, autonevek, rendszamok):
     legujabbak = kivalogatas(evjaratok, autonev, autonevek, rendszamok)
     kiiratas(legujabbak)
 
-def f5():
+def f5(ertekelesek, kert_auto, autonevek):
     kiiras(5)
-
+    atlag = minmax(ertekelesek, kert_auto, autonevek)
+    print(f"{atlag} az atlaga a legnagyobb es a legkissebb ertekelesü autonak")
 
 def nyolcfeletti(re, er):
     i = 0
@@ -82,6 +84,31 @@ def kiiratas(leg):
     else:
         print("Nincs ilyen")
 
+def megszamolas(autonevek):
+    if "Ford" in autonevek:
+        darab = 0 
+        for i in range(len(autonevek)):
+            if autonevek[i] == "Ford":
+                darab += 1
+        print(f"{darab} db Ford auto van.")
+    else:
+        print("Nincs ilyen")
+
+def minmax(ertekelesek,kert_auto, autonevek):
+    maxe = 0 
+    mine = 0 
+    for i in range(len(autonevek)):
+        if autonevek[i] == kert_auto:
+            if ertekelesek[i] < maxe:
+                maxe = ertekelesek[i]
+
+            if ertekelesek[i] > mine:
+                mine = ertekelesek[i]
+
+    atlag = (maxe + mine) / 2
+    return atlag
+
+
 
 def main():
     fajlnev = input("Add meg a beolvasni kivant fajl nevet: ")
@@ -97,11 +124,11 @@ def main():
     print("\n")
     f2(evjaratok, kert_evjarat)
     print("\n")
-    f3()
+    f3(autonevek)
     print("\n")
     f4(evjaratok, autonev, autonevek, rendszamok)
     print("")
-    f5()
+    f5(ertekelesek, autonev, autonevek)
 
     
 
