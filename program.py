@@ -39,7 +39,7 @@ def f4(evjaratok, autonev, autonevek, rendszamok):
 def f5(ertekelesek, kert_auto, autonevek):
     kiiras(5)
     atlag = minmax(ertekelesek, kert_auto, autonevek)
-    print(f"{atlag} az atlaga a legnagyobb es a legkissebb ertekelesü autonak")
+    print(f"{atlag} a {kert_auto} atlaga a legnagyobb es a legkissebb ertekelesü autonak")
 
 def nyolcfeletti(re, er):
     i = 0
@@ -95,18 +95,21 @@ def megszamolas(autonevek):
         print("Nincs ilyen")
 
 def minmax(ertekelesek,kert_auto, autonevek):
-    maxe = 0 
-    mine = 0 
-    for i in range(len(autonevek)):
-        if autonevek[i] == kert_auto:
-            if ertekelesek[i] < maxe:
-                maxe = ertekelesek[i]
+    if kert_auto in autonevek:
+        maxe = 10 
+        mine = 0 
+        for i in range(len(autonevek)):
+            if autonevek[i] == kert_auto:
+                if ertekelesek[i] < maxe:
+                    maxe = ertekelesek[i]
 
-            if ertekelesek[i] > mine:
-                mine = ertekelesek[i]
+                if ertekelesek[i] > mine:
+                    mine = ertekelesek[i]
 
-    atlag = (maxe + mine) / 2
-    return atlag
+        atlag = (maxe + mine) / 2
+        return round(atlag, 1)
+    else:
+        return 0
 
 
 
