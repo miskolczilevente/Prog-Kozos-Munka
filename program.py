@@ -11,8 +11,10 @@ def beolvasas(au, re, ev, er, fn):
 
     fr.close()
 
+
 def kiiras(n):
     print(f"{n}. Feladat:")
+
 
 def f1(rendszamok, ertekelesek):
     kiiras(1)
@@ -26,6 +28,8 @@ def f2(evjaratok, kert_evjarat):
 
 def f3():
     kiiras(3)
+
+
 def f4(evjaratok, autonev, autonevek, rendszamok):
     kiiras(4)
     legujabbak = kivalogatas(evjaratok, autonev, autonevek, rendszamok)
@@ -34,10 +38,20 @@ def f4(evjaratok, autonev, autonevek, rendszamok):
 def f5():
     kiiras(5)
 
+
+def nyolcfeletti(re, er):
+    i = 0
+    while i < len(er) and not(er[i] > 8):
+        i += 1
+    if i < len(er):
+        print(f"Az első 8.0 fölöttire értekelt autó rendszama: {re[i]}") 
+    else:
+        print("Nincs 8.0 fölöttire értékelt autó!")
+
+
 def evjarat(evj, keev=""):
     if keev == "" or keev == "0":
         print("Nem adtál meg erteket")
-
     else:
         i = 0
         keev = int(keev)
@@ -49,14 +63,6 @@ def evjarat(evj, keev=""):
             print(f"Nincs {keev} évjáratú auto")
        
 
-def nyolcfeletti(re, er):
-    i = 0
-    while i < len(er) and not(er[i] > 8):
-        i += 1
-    if i < len(er):
-        print (f"Az első 8.0 fölöttire értekelt autó rendszama: {re[i]}") 
-    else:
-        print("Nincs 8.0 fölöttire értékelt autó!")
 
 def kivalogatas(evj, nev, autolista, rendsz):
     legujabbak = []
@@ -64,6 +70,7 @@ def kivalogatas(evj, nev, autolista, rendsz):
         if nev == autolista[i] and 2020 < evj[i]:
             legujabbak.append(rendsz[i])
     return legujabbak
+
 
 def kiiratas(leg):
     if len(leg) > 0:
