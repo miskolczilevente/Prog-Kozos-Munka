@@ -39,7 +39,7 @@ def f4(evjaratok, autonev, autonevek, rendszamok):
 def f5(ertekelesek, kert_auto, autonevek):
     kiiras(5)
     atlag = minmax(ertekelesek, kert_auto, autonevek)
-    print(f"{atlag} a {kert_auto} atlaga a legnagyobb es a legkissebb ertekelesü autonak")
+    print(f"{atlag} a(z) {kert_auto} legnagyobb es a legkissebb ertekelesenek atlaga")
 
 def nyolcfeletti(re, er):
     i = 0
